@@ -22,7 +22,8 @@ type Room {
     id: ID!
     title: String!
     capacity: Int!
-    floor: Int!
+    floor: Int!,
+    events: [Event]
 }
 
 input RoomInput {

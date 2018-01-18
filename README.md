@@ -151,3 +151,12 @@ addUserToEvent (root, { id, userId }, context) {
             });
   }
 ```
+7. Добавим в схему GraphQl связь один ко многим, для room - events.
+```ecmascript 6
+
+      Room: {
+        events (room) {
+          return room.getEvents();
+        }
+      }
+```

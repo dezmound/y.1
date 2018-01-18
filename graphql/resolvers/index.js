@@ -18,6 +18,12 @@ module.exports = function resolvers () {
       }
     },
 
+      Room: {
+        events (room) {
+          return room.getEvents();
+        }
+      },
+
     Date: GraphQLDate
   };
 };

@@ -10,7 +10,7 @@ const sequelize = new Sequelize(null, null, null, {
 
 operatorsAliases: { $and: Op.and },
 
-  logging: true
+  logging: false
 });
 
 scheme(sequelize);

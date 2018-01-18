@@ -6,11 +6,12 @@ const bodyParser = require('body-parser');
 const pagesRoutes = require('./pages/routes');
 const graphqlRoutes = require('./graphql/routes');
 const { createData } = require('./create-mock-data');
+const cors = require('cors'); /* 3 Задание */
 
 const app = express();
 
 app.use(bodyParser.json());
-
+app.use(cors()); /* 3 Задание */
 app.use('/', pagesRoutes);
 app.use('/graphql', graphqlRoutes);
 app.use(express.static(path.join(__dirname, 'public')));
